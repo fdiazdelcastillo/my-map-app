@@ -31,7 +31,7 @@ const Map = ({ address }) => {
         }
       });
     });
-  }, [apiKey, address]);
+  }, [process.env.GOOGLE_MAPS_API_KEY, address]);
 
   return <div style={{ height: "400px", width: "100%" }} ref={mapRef} />;
 };
