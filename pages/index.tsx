@@ -1,10 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import OpenStreetMap from "../components/OpenStreetMap";
+import dynamic from "next/dynamic";
 require("dotenv").config();
 
 const inter = Inter({ subsets: ["latin"] });
+
+const OpenStreetMap = dynamic(() => import("../components/OpenStreetMap"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
