@@ -7,7 +7,7 @@ const Map = ({ address }) => {
 
   useEffect(() => {
     const loader = new Loader({
-      apiKey: process.env.GOOGLE_MAPS_API_KEY,
+      apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
       version: "weekly",
     });
 
@@ -31,7 +31,7 @@ const Map = ({ address }) => {
         }
       });
     });
-  }, [process.env.GOOGLE_MAPS_API_KEY, address]);
+  }, [process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, address]);
 
   return <div style={{ height: "400px", width: "100%" }} ref={mapRef} />;
 };
