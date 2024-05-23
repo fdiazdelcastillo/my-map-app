@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
+require("dotenv").config();
 
-const Map = ({ apiKey, address }) => {
+const Map = ({ address }) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
     const loader = new Loader({
-      apiKey: apiKey,
+      apiKey: process.env.GOOGLE_MAPS_API_KEY,
       version: "weekly",
     });
 

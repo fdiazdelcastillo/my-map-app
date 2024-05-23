@@ -17,10 +17,7 @@ export default function Home() {
       </Head>
       <main className="main">
         <div>Hola Mafe</div>
-        <Map
-          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
-          address="1600 Amphitheatre Parkway, Mountain View, CA"
-        />
+        <Map address="1600 Amphitheatre Parkway, Mountain View, CA" />
       </main>
     </>
   );
