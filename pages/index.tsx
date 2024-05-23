@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import Map from "../components/Map";
+import OpenStreetMap from "../components/OpenStreetMap";
 require("dotenv").config();
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,8 +16,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main">
-        <div>Hola Mafe</div>
-        <Map address="1600 Amphitheatre Parkway, Mountain View, CA" />
+        <h1 className="text-center">OpenStreetMap</h1>
+        <OpenStreetMap />
       </main>
     </>
   );
